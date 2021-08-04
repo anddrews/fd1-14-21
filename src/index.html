@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./main.scss">
-    <title>First project</title>
-    <script src="./js/main.js" defer></script>
-  </head>
-  <body>
-    <h1>Hello world</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./main.scss">
+  <title>First project</title>
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <h1 id="anchor">Inline tags</h1>
+  <a href="#bottom">Bottom</a>
+  <section>
+    <h2>A</h2>
+    <a href="http://ya.ru" target="value">Go to yandex</a>
+    <a href="./about-us.html">About us</a>
+    <a href="mailto:mail@some.com">Mail to mail@some.com</a>
+    <a href="skype:skypeId">Skype chat with smb</a>
+    <a href="tel:+37523222569874 ">Make a call smb</a>
+  </section>
+  <section>
+    <h2>Img</h2>
+    <p>external link</p>
+    <img
+      src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+      alt="Sad kitten">
+    <p>Internal link</p>
+    <img src="./img/sad-cat.jpg" alt="">
+  </section>
+  <a id="bottom" href="#anchor">Top</a>
+</body>
+
 </html>
