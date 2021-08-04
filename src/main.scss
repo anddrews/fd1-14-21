@@ -5,4 +5,53 @@ body * {
   outline: 1px solid lightgrey;
 }
 
+#anchor {
+  // color: black !important;
+}
 
+.second-class.anchor {
+  color: greenyellow;
+}
+
+.second-class {
+  color: green;
+}
+
+.anchor {
+  color: tomato;
+}
+
+[id="anchor"] {
+  color: navy;
+}
+
+h1 {
+  color: yellow;
+}
+
+
+section > h2 {
+  color: aquamarine;
+}
+
+a + a {
+  color: red;
+}
+
+div ~ a {
+  color: green;
+}
+
+.inline-block {
+  height: 100px;
+  width: 250px;
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  height: 100px;
+  background-color: #fadc23;
+  margin: 10px 30px 40px;
+  padding: 20px 5px;
+}
