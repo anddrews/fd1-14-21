@@ -2,4 +2,88 @@ body * {
   outline: 1px solid lightgrey;
 }
 
+section header {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.example-block {
+  width: 150px;
+  height: 150px;
+}
+
+.first-block {
+  background-color: yellow;
+}
+
+.second-block {
+  background-color: green;
+}
+
+.first-block {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+.second-block {
+  position: relative;
+  bottom: 50px;
+  left: 100px;
+  z-index: 0;
+}
+
+.second-block {
+  position: relative;
+}
+
+.button {
+  font-size: 25px;
+}
+
+.button:active {
+  position: relative;
+  bottom: 1px;
+  left: 1px;
+}
+
+.button:hover {
+  background-color: tomato;
+}
+
+.pos-absolute-wrapper {
+  position: relative;
+  border: 2px solid green;
+  top: 0;
+}
+
+.pos-absolute {
+  position: absolute;
+  background-color: #30ceac;
+  top: 50px;
+  left: 50px;
+}
+
+.pos-fixed {
+  position: fixed;
+  // background-color: #30ceac80;
+  top: 0;
+  width: 100%;
+  opacity: .5;
+}
+
+.sticky-wrapper {
+  height: 100vh;
+  margin-bottom: 100px;
+  border: 3px dotted brown;
+}
+
+.pos-sticky {
+  position: sticky;
+  bottom: 0;
+  background-color: #06afe2;
+}
 
