@@ -1,5 +1,31 @@
+// @import './reset.scss';
+@import './normalize.scss';
+
 body * {
   outline: 1px solid lightgrey;
 }
 
+.menu__item {
+  // display: none;
+}
 
+.menu {
+  display: inline-block;
+  position: relative;
+}
+.menu:hover {
+  cursor: pointer;
+}
+
+.menu__item {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  min-width: 150px;
+  background-color: tomato;
+}
+
+.menu:hover .menu__item {
+  display: flex;
+  flex-direction: column;
+}
