@@ -1,5 +1,29 @@
-body * {
-  outline: 1px solid lightgrey;
+@import './sprites.scss';
+@import './partials/new-partial/img';
+
+@font-face {
+  font-family: 'Our-custom-font';
+  src: url('/fonts/italliano.ttf');
+  font-style: italic;
+  font-weight: normal;
 }
 
+@font-face {
+  font-family: 'Our-custom-font';
+  src: url('/fonts/chewy.ttf');
+}
+
+body * {
+  // outline: 1px solid lightgrey;
+  font-family: 'Our-custom-font';
+  font-style: italic;
+}
+
+.twitter {
+  width: 1000px;
+}
+
+.main-menu {
+  display: flex;
+}
 

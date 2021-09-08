@@ -3,11 +3,53 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./fonts/italliano.ttf">
+    <link rel="stylesheet" href="./fonts/chewy.ttf">
     <link rel="stylesheet" href="./main.scss">
     <title>First project</title>
+    
+    <script src="https://kit.fontawesome.com/6400fdeca0.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Hello world</h1>
+    <h1>Hello world <span class="far fa-times-circle"></span> some text</h1>
+    <!-- <i class="fas fa-snowboarding" ></i>
+    <i class="fab fa-airbnb"></i>
+    <i class="far fa-times-circle"></i>
+    <div class="sprite bg-twitter"></div>
+    <img src="./img/twitter-png.png" alt="" class="twitter">
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+    <svg width="20px" height="20px" viewport="0 0 20 20">
+      <circle cx="10" cy="10" r="8" fill="transparent" stroke="red"></circle>
+      <circle cx="10" cy="10" r="6" fill="transparent" stroke="red"></circle>
+      <circle cx="10" cy="10" r="4" fill="red" stroke="red"></circle>
+    </svg>  -->
+    <div class="main-menu">
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/twitter-png.png",
+      "caption": "twitter"
+    })
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/sprites.png",
+      "caption": "instagramm"
+    })
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/twitter-png.png",
+      "caption": "twitter"
+    })
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/twitter-png.png",
+      "caption": "twitter"
+    })
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/twitter-png.png",
+      "caption": "twitter"
+    })
+    @@include('./partials/new-partial/_img.html', {
+      "path": "./img/twitter-png.png",
+      "caption": "twitter"
+    })
+  </div>
   </body>
 </html>
