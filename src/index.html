@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./fonts/italliano.ttf">
     <link rel="stylesheet" href="./fonts/chewy.ttf">
     <link rel="stylesheet" href="./main.scss">
@@ -13,43 +14,85 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Hello world <span class="far fa-times-circle"></span> some text</h1>
-    <!-- <i class="fas fa-snowboarding" ></i>
-    <i class="fab fa-airbnb"></i>
-    <i class="far fa-times-circle"></i>
-    <div class="sprite bg-twitter"></div>
-    <img src="./img/twitter-png.png" alt="" class="twitter">
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-    <svg width="20px" height="20px" viewport="0 0 20 20">
-      <circle cx="10" cy="10" r="8" fill="transparent" stroke="red"></circle>
-      <circle cx="10" cy="10" r="6" fill="transparent" stroke="red"></circle>
-      <circle cx="10" cy="10" r="4" fill="red" stroke="red"></circle>
-    </svg>  -->
-    <div class="main-menu">
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/twitter-png.png",
-      "caption": "twitter"
-    })
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/sprites.png",
-      "caption": "instagramm"
-    })
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/twitter-png.png",
-      "caption": "twitter"
-    })
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/twitter-png.png",
-      "caption": "twitter"
-    })
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/twitter-png.png",
-      "caption": "twitter"
-    })
-    @@include('./partials/new-partial/_img.html', {
-      "path": "./img/twitter-png.png",
-      "caption": "twitter"
-    })
-  </div>
+    <div>
+      <div>
+        <div>
+          <label for="checkbox1">
+            Checkbox1
+          </label>
+        </div>
+      </div>
+    </div>
+    <h1>Hello world</h1>
+    <form action="https://httpbin.org/post" method="POST">
+      <label for="field">
+        Field        
+      </label>
+      <input id="field" type="text" name="field" value="default" required>
+      <input type="email" name="email" value="test@test.com">
+      <input type="date" name="date">
+      <input type="number" name="number" value="15" min="10" max="20">
+      <input type="password" name="password" value="default">
+      <input type="tel" name="tel" value="default">
+      <input type="color" name="color" value="default">
+      
+      <input id="checkbox1" type="checkbox" name="cb1" value="check-box1">
+      <input type="checkbox" name="cb2" value="check-box2">
+      <input type="checkbox" name="cb3" value="check-box3">
+      <input type="checkbox" name="cb4" value="check-box4">
+      <label>
+        Yes
+        <input type="radio" name="radio" value="yes">
+      </label>
+      <label>
+        No
+        <input type="radio" name="radio" value="no">
+      </label>
+      <label>
+        I'm not sure
+        <input type="radio" name="radio" value="not sure">
+      </label>
+      <select name="select" id="1">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+      <input type="submit">
+    </form>
+
+    <section>
+      <header>
+        <h3>
+          Styled checkbox
+        </h3>
+      </header>
+      <input id="styled-checkbox" class="styled-checkbox" type="checkbox" name="test">
+      <label for="styled-checkbox" class="styled-checkbox__label">Styled checkbox</label>
+      <input id="styled-checkbox1" class="styled-checkbox" type="checkbox" name="test">
+      <label for="styled-checkbox1" class="styled-checkbox__label">One more checkbox</label>
+    </section>
+    <section>
+      <header>
+        <h3>
+          Accordion
+        </h3>
+      </header>
+        <div class="accordion">
+          <input id="accordion" type="checkbox" class="accordion__input">
+
+          <div class="accordion__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, temporibus modi? Quis accusamus molestias possimus veritatis harum eius modi iusto eum quidem, et aliquam quibusdam laudantium doloribus aliquid at. Numquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, temporibus modi? Quis accusamus molestias possimus veritatis harum eius modi iusto eum quidem, et aliquam quibusdam laudantium doloribus aliquid at. Numquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, temporibus modi? Quis accusamus molestias possimus veritatis harum eius modi iusto eum quidem, et aliquam quibusdam laudantium doloribus aliquid at. Numquam.
+          </div>
+          <label for="accordion" class="accordion__opener">
+            Expand/close
+          </label>
+        </div>
+      </section>
   </body>
 </html>
