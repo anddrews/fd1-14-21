@@ -1,0 +1,14 @@
+$border-width: 5px;
+
+@mixin mainFont {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@mixin smallSize {
+    @media screen and (max-width: 505px) {
+        @content;
+        background-color: gray;
+    }
+}

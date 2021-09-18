@@ -1,5 +1,40 @@
+@import './variables.scss';
+
 body * {
   outline: 1px solid lightgrey;
 }
 
 
+.btn-primary {
+  background-color: #ed3456;
+}
+
+.modal {
+  // display: block;
+}
+
+.form-input {
+  display: flex;
+  margin: 10px 20px;
+  align-items: center;
+  padding: 0 5px;
+
+  @include mainFont();
+  @include smallSize();
+
+  &__input {
+    margin-left: 10px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+
+
+    &--error {
+      border-color: rgb(219, 14, 14);
+    }
+
+    @include smallSize() {
+      border: $border-width solid green;
+    }
+  }
+}
