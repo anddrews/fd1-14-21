@@ -1,5 +1,63 @@
+@import './variables.scss';
+
 body * {
   outline: 1px solid lightgrey;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.hero {
+  border-top: 5px solid $color-orange;
+  border-bottom: 5px solid $color-orange;
+  background-image: url("./img/orange.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+
+    &--first {
+      color: orange;
+      background-color: gray;
+      margin-bottom: 15px;
+    }
+    &--second {
+      color: gray;
+      background-color: orange;
+    }
+  }
+}
+
+.with-aside {
+  display: flex;
+
+  &__aside {
+    width: 200px;
+  }
+
+  &__content {
+    border: 2px solid red;
+    flex: 1 0 auto;
+  }
+}
 
