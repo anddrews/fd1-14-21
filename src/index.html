@@ -12,11 +12,23 @@
       "headerText": "Some text Some text"
     })
     @@include('./partials/underlined-header/_underlined-header.html', {
-      "headerText": "Some text Some text",
-      "type": "top"
+      "headerText": "Another content",
+      "type": "hot"
+    })
+    @@include('./partials/underlined-header/_underlined-header.html', {
+      "headerText": "Another content",
+      "type": "last"
     })
     <div class="container">
       <div class="square"></div>
+    </div>
+    @@include('./partials/test/_test.html', {
+      "param": "<h1>Hello world</h1><h2>Some text</h2>",
+      "path": "http://google.com"
+    })
+    <div class="news">
+      <img class="news__img" src="">
+      <div class="news__text">news text</div>
     </div>
   </body>
 </html>

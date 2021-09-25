@@ -4,8 +4,12 @@
     font-weight: bold;
     color: gray;
 
-    &.top {
+    &.hot {
         color: rgb(67, 67, 185);
+    }
+
+    &.last {
+        color:rgb(22, 197, 46)
     }
 
     &:after {
@@ -18,8 +22,12 @@
         position: relative;
         top: 20px;
     }
-    &.top:after {
+    &.hot:after {
         border-color: #df3421;
+    }
+
+    &.last:after {
+        border-color: rgb(22, 197, 46);
     }
 }
 
