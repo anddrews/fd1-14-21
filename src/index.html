@@ -8,6 +8,15 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Hello world</h1>
+    @@include('./partials/underlined-header/_underlined-header.html', {
+      "headerText": "Some text Some text"
+    })
+    @@include('./partials/underlined-header/_underlined-header.html', {
+      "headerText": "Some text Some text",
+      "type": "top"
+    })
+    <div class="container">
+      <div class="square"></div>
+    </div>
   </body>
 </html>

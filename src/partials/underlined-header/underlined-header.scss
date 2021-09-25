@@ -1,0 +1,49 @@
+.underlined-header {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    color: gray;
+
+    &.top {
+        color: rgb(67, 67, 185);
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid gray;
+        flex: 1 0 auto;
+        margin-left: 10px;
+        height: 0;
+        position: relative;
+        top: 20px;
+    }
+    &.top:after {
+        border-color: #df3421;
+    }
+}
+
+.block {
+    color: green;
+
+    &__element {
+        color: blue;
+        
+        &--modificator {
+            color: red;
+        }
+    }
+}
+
+
+.block {
+    color: green;
+}
+
+.block__element {
+    color: blue;
+}
+
+.block__element--modificator {
+    color: red;
+}
