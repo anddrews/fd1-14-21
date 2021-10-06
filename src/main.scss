@@ -3,3 +3,36 @@ body * {
 }
 
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide-active {
+  position: relative;
+  &:after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: 40px;
+    right: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -3px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto;
+  bottom: 40px;
+  color: red;
+}
+.swiper-button-prev {
+  right: 150px;
+  left: auto;
+}
+
