@@ -1,5 +1,13 @@
+@import './variables.scss';
+@import './partials/art-of-cake/art-of-cake.scss';
+
 body * {
   outline: 1px solid lightgrey;
 }
 
+
+.container {
+  max-width: $main-container;
+  margin: 0 auto;
+}
 

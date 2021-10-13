@@ -1,0 +1,72 @@
+@import url('../../variables.scss');
+
+.art-of-cake {
+    background-image: url('../../img/art-of-cake-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        padding: 100px 0;
+    }
+
+    &__column {
+        display: flex;
+        width: 50%;
+
+
+        &--right {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+    }
+
+    &__square-item {
+        display: flex;
+        width: calc(50% - 5px);
+    }
+}
+
+.image-with-border {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+        content: "";
+        display: block;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border: 5px solid $color-white;
+        position: absolute;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.art-of-cake__column--right {
+    position: relative;
+
+    &:after {
+        content: "Taste so good";
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../img/central-part.png');
+        background-position: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+}
