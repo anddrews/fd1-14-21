@@ -3,3 +3,7 @@ body * {
 }
 
 
+.gradient {
+  background: linear-gradient(to bottom, #29e004 0%,#1200d8 100%,#1200d8 100%,#0c04ea 100%,#1200d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  height: 300px;
+}
