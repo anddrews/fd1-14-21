@@ -8,195 +8,171 @@
 // BigInt - 
 
 
-var man = {
-    age: 15,
-    name: 'Alex',
-    address: {
-        city: 'Brooklin',
-        street: '1st Left avenu'
+
+console.log('before ' + variable);
+variable = 10;
+console.log('after ' + variable);
+
+
+var variable;
+
+if (true) {
+    var variable;
+} else {
+
+}
+
+
+smth();
+
+
+function smth() {
+    var fnVr = 20;
+    console.log(variable);
+
+}
+
+
+console.log(fn);
+
+var fn = function () {
+    console.log('function expression');
+}
+
+fn();
+
+function smth2() {
+    var fnVr = 30;
+}
+
+
+
+var variable = 30;
+
+console.log('after reassignment ' + variable);
+
+// console.log(letVariable);
+let letVariable = 'letVariable';
+console.log(letVariable);
+
+
+if (true) {
+    let letInIf = 'letInIf';
+    console.log(letInIf);
+}
+
+const constVariable = 'constVariable';
+
+// constVariable = 20;
+
+
+const today = 'Saturday';
+
+const obj = {};
+
+console.log(obj);
+
+obj.a = 'smth';
+
+console.log(obj);
+
+
+const fnExpr = function Fn () {
+    console.log('function expression');
+    // Fn();
+}
+
+
+fnExpr();
+
+
+const fibo = function fiboTmp (n) {
+    if (n === 1) {
+        // calculate 1 element
+
+        return 0;
+    }
+
+    if (n === 2) {
+        // calculate 2 element
+        return 1;
+    }
+
+
+    //calculate n element
+
+    return fiboTmp(n - 2) + fiboTmp(n - 1);
+}
+
+// console.log(fibo(1));
+// console.log(fibo(2));
+// console.log(fibo(3));
+console.log(fibo(15));
+// console.log(fibo(5));
+// console.log(fibo(6));
+// console.log(fibo(7));
+
+//0 1 1 2 3 5 8
+
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+
+
+
+
+function triangle (lines, sign) {
+    var tmp = sign || '*';
+    for(var i = 0; i < lines; i++) {
+        var res = tmp;
+        for (var j = 0; j < i; j++){
+            res += tmp; 
+        }
+        console.log(res);
     }
 }
 
-// var c = 3;
 
-// var obj = man;
-
-// man.name = 'Mike';
-
-// console.log('man name ' + man.name);
-// console.log('obj name ' + obj.name);
-
-// var num = 3;
-// var sec = num;
-
-// console.log(num);
-// console.log(sec);
-
-// num = 5;
-// console.log(num);
-// console.log(sec);
-
-// var number = '3';
-
-// if (number === 3) {
-//     console.log(' number more than five ' + number);
-// } else if (number > 10) {
-//     console.log(' number more than ten ' + number);
-// } else {
-//     console.log(' number ' + number);
-// };
-
-// console.log ('Switch case');
-
-// var a = 5;
-
-// switch (a) {
-//     case 1: {
-//         console.log(' variable is 1');
-//         break;
-//     }
-
-//     case 2: 
-//     case 5: {
-//         console.log(' variable is 2 or 5');
-//         break;
-//     }
-
-//     case 3: {
-//         console.log(' variable is 3');
-//         break;
-//     }
-
-//     default: {
-//         console.log(' variable isn\'t 1 or 2 or 3');
-//     }
-// }
+// triangle(10, '%');
 
 
-// var cond = 2;
-
-// var variable = cond > 3 ? 'true' : 'false';
-
-// console.log(variable);
-
-
-// // Loops
-
-// var a = 5;
-
-// while (a > 0) {
-//     console.log('while a = ' + a);
-//     a = a - 1;
-// }
-
-// do {
-//     console.log('do while a = ' + a);
-//     a = a - 1;
-// } while (a > 0);
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
 
 
-// for (var index = 1; index <= 5; ) {
-//     console.log ('for i = ' + index++);
-// }
+function triangleIso (lines) {
+    var maxStars = lines * 2 - 1;
 
-// var d = 3;
-// var d = 5;
-// let f = 3;
-// const e = 5;
-// f = 10;
-// // e = 15;
+    for (var i = 0; i < lines; i++) {
+        var res = '';
 
-// const t = {
-//     b: 3,
-// }
+        for (var j = 0; j < (maxStars - (i * 2) - 1) / 2; j++) {
+            res += ' ';
+        }
+        for (var j = 0; j < (i + 1) * 2 - 1; j++) {
+            res += '*';
+        }
 
-// t.b = 10;
-
-function pow2 (number) {
-    let result = number * number;
-
-    return result;
-}
-
-function pow (num, exp) {
-    let res = 1;
-
-    for (var i = 1; i <= exp; i++) {
-        res = res * num;
-        // console.log(res)
+        console.log(res)
     }
-
-    return res;
 }
 
-const g = pow(10, 2);
+triangleIso(7);
 
-// console.log('result ' + g);
-
-// const numbers = [5, 4, 3, 2, 1, [1, 'two', 3 ,3], {a: 3}, 'jksdhfksdjh'];
-
-// console.log(numbers[5][1]);
-
-const arr = ['zero', 'one', 'two', 'tree', 'four', 'five', , 2];
-
-// for (var i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
-
-
-const numbers = [4, 6, 1, -9, 45, 33];
-// 4 > 6 
-// 4 > 1 -> 4 <-> 1 [1, 6, 4, -9, 45, 33]
-// 1 > -9 -> 1 <-> -9 [-9, 6, 4, 1, 45, 33]
-// -9 > 45
-// -9 > 33
-// [-9, 6, 4, 1, 45, 33]
-// [-9, 1, 4, 6, 45, 33]
-// [-9, 1, 4, 6, 45, 33]
-// [-9, 1, 4, 6, 45, 33]
-// [-9, 1, 4, 6, 33, 45]
-// console.log(numbers);
-
-// for (var i = 0; i < numbers.length - 1; i++) {
-//     for (var j = i + 1; j < numbers.length; j++) {
-//         if (numbers[i] > numbers[j]) {
-//             var tmp = numbers[i];
-//             numbers[i] = numbers[j];
-//             numbers[j] = tmp;
-//         }
-//     }
-//     // console.log(`${i + 1}  ${numbers}`);
-// }
-
-console.log(numbers.sort(function(a, b) {
-    return b - a;
-}))
-// console.log(numbers);
-
-// ''
-// 'index * number = index * number and if index < 9 add \n'
-
-const birds = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"];
-const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-
-
-function isGoos (bird) {
-    return !geese.includes(bird);
-  }
-
-
-function gooseFilter (birds) {
-    return birds.find(function(bird) {
-        return bird == 'Mallard sdfd';
-    });
-    
-}
-
-console.log(gooseFilter(birds));
-
-var arr1 = [1, 2, 3, 4];
-var arr2 = [5, 6, 7, 8];
-
-console.log(arr1.concat(arr2))
-
-
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
