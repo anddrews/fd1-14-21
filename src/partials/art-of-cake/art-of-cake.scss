@@ -16,15 +16,14 @@
 
 
         &--right {
-            flex-wrap: wrap;
-            row-gap: 10px;
-            column-gap: 10px;
+            gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     &__square-item {
         display: flex;
-        width: calc(50% - 5px);
     }
 }
 
