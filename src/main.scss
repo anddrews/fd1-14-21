@@ -7,3 +7,38 @@ body * {
   background: linear-gradient(to bottom, #29e004 0%,#1200d8 100%,#1200d8 100%,#0c04ea 100%,#1200d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height: 300px;
 }
+
+.content {
+  position: relative;
+}
+
+.picture {
+  width: 920px;
+  height: 827px;
+  background-image: url("../img/cat.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-mask-image: url('../img/cat_mask.png');
+  -webkit-mask-size: 920px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.clip-path {
+  width: 300px;
+  height: 300px;
+  background-color: #3384de;
+  clip-path: polygon(100% 0, 67% 49%, 100% 100%, 0% 100%, 27% 50%, 0% 0%);
+}
+
+.parent {
+  display: flex;
+  & &__item {
+    display: block;
+  }
+}

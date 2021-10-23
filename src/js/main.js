@@ -165,14 +165,104 @@ function triangleIso (lines) {
     }
 }
 
-triangleIso(7);
+// triangleIso(7);
 
-//     *
+//     *    
 //    ***
-//   *****
-//  *******
 // *********
 //  *******
 //   *****
 //    ***
 //     *
+
+
+
+function middleStars(items, length) {
+    var arr = new Array(length);
+    arr.fill(' ');
+
+    var middle = Math.trunc(arr.length / 2);
+
+
+    if (items > 0) {
+        arr[middle] = '*';
+
+        for (var i = 1; i <= Math.trunc(items / 2); i++) {
+            arr[middle - i] = '*';
+            arr[middle + i] = '*';
+        }
+
+    }
+    
+    
+    return arr.join('');
+}
+
+function renderShape(arr, renderLine) {
+    var isExist = arr.every(function(item) {
+        return item % 2
+    })
+
+    if (!isExist) {
+        console.log('This shape can\'t be rendered');
+        return ;
+    }
+    var length = Math.max(...arr);
+
+    for (var i = 0; i < arr.length; i++) {
+        console.log(renderLine(arr[i], length));
+    }
+}
+
+var arr = [1, 3, 5, 7, 9, 7, 5, 3, 1];
+var arr1 = [1, 3, 11, 7, 5, 3, 1];
+var arr2 = [5, 5, 5, 5, 5];
+
+
+function starsThenSpaces(items, length) {
+    var arr = new Array(items);
+    arr.fill('*');
+
+    return arr.join('');
+}
+
+function spaceThenStars (items, length) {
+    var stars = new Array(items);
+    stars.fill('*');
+    var spaces = new Array(length - items);
+    spaces.fill(' ');
+    
+    return [...spaces, ...stars].join('');
+
+}
+
+renderShape(arr, middleStars);
+renderShape(arr, starsThenSpaces);
+renderShape(arr, spaceThenStars);
+
+var c = 5;
+
+console.log(`sum of 5 and 10
+ is 3${ middleStars(3, 9) }
+ 3`);
+
+
+
+var rnd = Math.random();
+var min = 1;
+var max = 10;
+
+function getRnd (min, max) {
+    return Math.trunc(Math.random() * (max - min) + min);
+}
+
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+console.log(getRnd(1, 10));
+
+
