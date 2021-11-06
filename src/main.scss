@@ -3,3 +3,57 @@ body * {
 }
 
 
+.tree {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    appearance: none;
+    margin: 0;
+  }
+
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &.has-children:before {
+      content: '';
+      border-style: solid;
+      border-width: 15px 0 15px 15px;
+      border-color: transparent transparent transparent #888a8b;
+      display: block;
+      margin-right: 15px;
+    }
+
+    &:after {
+      content: attr(data-children-count);
+      margin-left: 15px;
+      color: red;
+    }
+  }
+
+  &__input:checked + &__item:before {
+    border-width: 15px 15px 0 15px;
+    border-color: #19191a transparent transparent transparent;
+  }
+
+  &__sub-items {
+    padding-left: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__input:checked ~ &__sub-items {
+    height: auto;
+  }
+
+  &__input:focus + &__item {
+    outline: 3px solid #000;
+  }
+}
