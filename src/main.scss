@@ -87,3 +87,29 @@ body {
   }
 
 }
+
+.container {
+  display: flex;
+  border: 1px solid #ea35df;
+  margin: 20px;
+
+  &__left,
+  &__right {
+    width: 50%;
+    border: 2px solid #16cf5d;
+  }
+
+  &__right {
+    position: relative;
+
+  }
+
+  &__position {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    bottom: 50px;
+    left: -50px;
+  }
+}
